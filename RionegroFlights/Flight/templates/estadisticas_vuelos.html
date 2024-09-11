@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estadisticas de Vuelos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+        td {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Estadisticas de Vuelos</h2>
+
+<table>
+    <tr>
+        <th>Estadistica</th>
+        <th>Valor</th>
+    </tr>
+    <tr>
+        <td>Vuelos nacionales</td>
+        <td>{{ vuelos_nacionales }}</td>
+    </tr>
+    <tr>
+        <td>Vuelos internacionales</td>
+        <td>{{ vuelos_internacionales }}</td>
+    </tr>
+    <tr>
+        <td>Precio prom vuelos nacionales</td>
+        <td>${{ promedio_precio_nacional|floatformat:2 }} COP</td>
+    </tr>
+</table>
+
+</body>
+</html>
